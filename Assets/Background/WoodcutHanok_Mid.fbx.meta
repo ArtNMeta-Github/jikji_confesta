@@ -1,0 +1,763 @@
+fileFormatVersion: 2
+guid: f362dcfa10836034394de3d394c95cb5
+ModelImporter:
+  serializedVersion: 20300
+  internalIDToNameTable:
+  - first:
+      74: -4909378518189861015
+    second: Door005|Door005|Take 001|BaseLayer
+  - first:
+      74: -7937355813874281361
+    second: Door005|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: 5336177508398898570
+    second: Door005|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -6345305650409078946
+    second: Door005|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 5473240230316079347
+    second: Door005|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 6714285649670632371
+    second: Door005|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 1861154160559290482
+    second: Door005|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 7392335294399880334
+    second: Door005|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: 4165495937339329419
+    second: Door005|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: -4612452430291696515
+    second: Door005|WoodChang|Take 001|BaseLayer
+  - first:
+      74: 1462423557487564326
+    second: Door005|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -1937879117032181280
+    second: DoorFrame|Door005|Take 001|BaseLayer
+  - first:
+      74: -1559881204480191184
+    second: DoorFrame|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -6236306275942254661
+    second: DoorFrame|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 4441878857207028968
+    second: DoorFrame|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -8328675750899132367
+    second: DoorFrame|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 3248831004917036878
+    second: DoorFrame|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -2351734096292404834
+    second: DoorFrame|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 9150659977479064811
+    second: DoorFrame|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -7081950861041480935
+    second: DoorFrame|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: -3405130505370212821
+    second: DoorFrame|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -8801574828123894847
+    second: DoorFrame|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 62687330296470259
+    second: Gapandea008|Door005|Take 001|BaseLayer
+  - first:
+      74: 4367812197018505083
+    second: Gapandea008|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -6366314575517214139
+    second: Gapandea008|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -1629297949158243679
+    second: Gapandea008|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 6862560096577277389
+    second: Gapandea008|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 8575113962928770544
+    second: Gapandea008|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -3524601109185980469
+    second: Gapandea008|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -2508945453403095494
+    second: Gapandea008|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -5007964419250777562
+    second: Gapandea008|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 8258576102759917878
+    second: Gapandea008|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -3517043411523277668
+    second: Gapandea008|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -8736223109634440439
+    second: Glass_015|Door005|Take 001|BaseLayer
+  - first:
+      74: 6217776750647345161
+    second: Glass_015|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -7209903676019997061
+    second: Glass_015|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -8422933957984730061
+    second: Glass_015|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -8759613406263526344
+    second: Glass_015|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -7869807518284414398
+    second: Glass_015|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -8737720730931781564
+    second: Glass_015|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 8707046435833100573
+    second: Glass_015|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -8525800436688142904
+    second: Glass_015|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: -5655455516598830813
+    second: Glass_015|WoodChang|Take 001|BaseLayer
+  - first:
+      74: 2381115075733770292
+    second: Glass_015|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 1609528229098958379
+    second: PlasterWall_015|Door005|Take 001|BaseLayer
+  - first:
+      74: -7437046001907557204
+    second: PlasterWall_015|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -422519743340243912
+    second: PlasterWall_015|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -230917663110727286
+    second: PlasterWall_015|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 9107480901241371433
+    second: PlasterWall_015|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -8090655864075248672
+    second: PlasterWall_015|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -5425730583482900986
+    second: PlasterWall_015|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 1366587837453097689
+    second: PlasterWall_015|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -7092288473612355515
+    second: PlasterWall_015|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 8464578729668476168
+    second: PlasterWall_015|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -6373647373153182472
+    second: PlasterWall_015|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -3280598766487756387
+    second: StoneCastle003|Door005|Take 001|BaseLayer
+  - first:
+      74: -2100837085337100790
+    second: StoneCastle003|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -393588683604396319
+    second: StoneCastle003|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 7172649886833907725
+    second: StoneCastle003|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -1457484724277607843
+    second: StoneCastle003|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 3671267299724250637
+    second: StoneCastle003|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 4422063312699336259
+    second: StoneCastle003|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -8505849444793335786
+    second: StoneCastle003|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -5058697812090936319
+    second: StoneCastle003|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 8499785543556175304
+    second: StoneCastle003|WoodChang|Take 001|BaseLayer
+  - first:
+      74: 5578667455757202789
+    second: StoneCastle003|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 1272905404605562144
+    second: WindowFrame|Door005|Take 001|BaseLayer
+  - first:
+      74: 6598039977139609336
+    second: WindowFrame|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -7350124705691837731
+    second: WindowFrame|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -8562756052407019048
+    second: WindowFrame|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 8918582990274609771
+    second: WindowFrame|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 6322069794208747154
+    second: WindowFrame|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 8670279168046021268
+    second: WindowFrame|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -8282937917584010387
+    second: WindowFrame|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -1871869203374996329
+    second: WindowFrame|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 439100390538922223
+    second: WindowFrame|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -6110130095499995046
+    second: WindowFrame|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 906453255946664858
+    second: WoodOil|Door005|Take 001|BaseLayer
+  - first:
+      74: 5008112484577191335
+    second: WoodOil|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -6227656486256998440
+    second: WoodOil|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -4089798414812723044
+    second: WoodOil|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -1058628399167678607
+    second: WoodOil|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -1069147733298817273
+    second: WoodOil|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 8471169327033008040
+    second: WoodOil|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -6328389594711902011
+    second: WoodOil|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: 3269176761595994836
+    second: WoodOil|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 4089119899824434731
+    second: WoodOil|WoodChang|Take 001|BaseLayer
+  - first:
+      74: 3260019398932227690
+    second: WoodOil|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -6632596010283655483
+    second: WoodPlankUi2leaxlw003|Door005|Take 001|BaseLayer
+  - first:
+      74: 6406267227700570765
+    second: WoodPlankUi2leaxlw003|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -7097633989545248433
+    second: WoodPlankUi2leaxlw003|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 7208144608997246879
+    second: WoodPlankUi2leaxlw003|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -2978907871564215831
+    second: WoodPlankUi2leaxlw003|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 1020059845762902822
+    second: WoodPlankUi2leaxlw003|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 6211981352304484379
+    second: WoodPlankUi2leaxlw003|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -6856478518363557336
+    second: WoodPlankUi2leaxlw003|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -2603852982460273941
+    second: WoodPlankUi2leaxlw003|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 9014190422277415533
+    second: WoodPlankUi2leaxlw003|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -1030131493568610587
+    second: WoodPlankUi2leaxlw003|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 2369103081861497986
+    second: WoodOil.005|Door005|Take 001|BaseLayer
+  - first:
+      74: 449736016727907924
+    second: WoodOil.005|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: 5976470296169438628
+    second: WoodOil.005|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 1043784278133797022
+    second: WoodOil.005|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 8428342377087967516
+    second: WoodOil.005|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 955435243061580822
+    second: WoodOil.005|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 7979093835561588701
+    second: WoodOil.005|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -1940328779067941511
+    second: WoodOil.005|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -7597295281496636366
+    second: WoodOil.005|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 7237730392526768968
+    second: WoodOil.005|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -6031647120025841473
+    second: WoodOil.005|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 1205565135051389697
+    second: WoodOil.003|Door005|Take 001|BaseLayer
+  - first:
+      74: 580136596987378595
+    second: WoodOil.003|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: 3846779118664354167
+    second: WoodOil.003|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -7780455016351796665
+    second: WoodOil.003|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 2031382403027905217
+    second: WoodOil.003|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 484342731694195362
+    second: WoodOil.003|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 3055323572648681362
+    second: WoodOil.003|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 7970823570338002177
+    second: WoodOil.003|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -3552719568821240508
+    second: WoodOil.003|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 6353429096708175903
+    second: WoodOil.003|WoodChang|Take 001|BaseLayer
+  - first:
+      74: 1065996883320449513
+    second: WoodOil.003|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 8814789426654126967
+    second: StoneCastle003.004|Door005|Take 001|BaseLayer
+  - first:
+      74: -8627714216502207350
+    second: StoneCastle003.004|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -3471593762098427069
+    second: StoneCastle003.004|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 245120502094997076
+    second: StoneCastle003.004|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -7279812954221600946
+    second: StoneCastle003.004|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -654324970299286339
+    second: StoneCastle003.004|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -1037162333590084802
+    second: StoneCastle003.004|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -2016505327566322369
+    second: StoneCastle003.004|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -539000221966104450
+    second: StoneCastle003.004|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: -1716540503210068957
+    second: StoneCastle003.004|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -5128345112378820688
+    second: StoneCastle003.004|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -8972346955334279935
+    second: StoneCastle003.005|Door005|Take 001|BaseLayer
+  - first:
+      74: 735848442652079279
+    second: StoneCastle003.005|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: 143948241714658987
+    second: StoneCastle003.005|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -2188635263375248514
+    second: StoneCastle003.005|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 8137692502951791679
+    second: StoneCastle003.005|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 8388334230928708422
+    second: StoneCastle003.005|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 4606003009154839146
+    second: StoneCastle003.005|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -7376007764438305765
+    second: StoneCastle003.005|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -2846587614323324346
+    second: StoneCastle003.005|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: -2063301682323647931
+    second: StoneCastle003.005|WoodChang|Take 001|BaseLayer
+  - first:
+      74: 4707510713375721159
+    second: StoneCastle003.005|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -8610615389779229090
+    second: WoodOil.006|Door005|Take 001|BaseLayer
+  - first:
+      74: -983639581208603828
+    second: WoodOil.006|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: 6190234200148023137
+    second: WoodOil.006|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -6733463451549546694
+    second: WoodOil.006|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -822366011501085508
+    second: WoodOil.006|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 6200206829079334186
+    second: WoodOil.006|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -7659195252940174208
+    second: WoodOil.006|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -6630326243395197347
+    second: WoodOil.006|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: 5920148070539041929
+    second: WoodOil.006|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: -4684134646082789712
+    second: WoodOil.006|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -7021557335501828619
+    second: WoodOil.006|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -1884404240615485667
+    second: StoneCastle003.002|Door005|Take 001|BaseLayer
+  - first:
+      74: 3877395768774433013
+    second: StoneCastle003.002|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -1125336347022394197
+    second: StoneCastle003.002|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 1001219517939793392
+    second: StoneCastle003.002|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -1496256552486569992
+    second: StoneCastle003.002|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -5845335481911443493
+    second: StoneCastle003.002|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 2382780231232000566
+    second: StoneCastle003.002|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 4965306706535866460
+    second: StoneCastle003.002|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: -4813270806834223532
+    second: StoneCastle003.002|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 904471585915898574
+    second: StoneCastle003.002|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -4318679839785937889
+    second: StoneCastle003.002|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -8924520539222318341
+    second: StoneCastle003.006|Door005|Take 001|BaseLayer
+  - first:
+      74: 6081877129938270933
+    second: StoneCastle003.006|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -4654035804021327049
+    second: StoneCastle003.006|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 7832997134150734455
+    second: StoneCastle003.006|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 4419925318900517511
+    second: StoneCastle003.006|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: 2919248274694311865
+    second: StoneCastle003.006|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -3656643594088684576
+    second: StoneCastle003.006|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 8019397145284428421
+    second: StoneCastle003.006|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: 2543822115517588916
+    second: StoneCastle003.006|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 2992147543474913378
+    second: StoneCastle003.006|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -3654872953470927921
+    second: StoneCastle003.006|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 5459011966711792998
+    second: DoorFrame.002|Door005|Take 001|BaseLayer
+  - first:
+      74: 2793692907827798479
+    second: DoorFrame.002|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -7346622459171330215
+    second: DoorFrame.002|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 7832743381227378458
+    second: DoorFrame.002|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -5644809035993121834
+    second: DoorFrame.002|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -7101646840136366701
+    second: DoorFrame.002|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -519788442192826236
+    second: DoorFrame.002|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 497010854529754898
+    second: DoorFrame.002|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: 1288081309688565638
+    second: DoorFrame.002|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: -1561515290963908263
+    second: DoorFrame.002|WoodChang|Take 001|BaseLayer
+  - first:
+      74: 978945907144059310
+    second: DoorFrame.002|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: -5164368519609064314
+    second: DoorFrame.005|Door005|Take 001|BaseLayer
+  - first:
+      74: 4448266651901981534
+    second: DoorFrame.005|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -5731054689500191125
+    second: DoorFrame.005|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -4818324533715210519
+    second: DoorFrame.005|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -3990876558045527598
+    second: DoorFrame.005|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -3453527955055998822
+    second: DoorFrame.005|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -5233784286855126729
+    second: DoorFrame.005|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: -6688234500716669735
+    second: DoorFrame.005|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: 8503925850699472552
+    second: DoorFrame.005|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 4254500406812805300
+    second: DoorFrame.005|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -6686053809726237902
+    second: DoorFrame.005|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 7458116166792781435
+    second: DoorFrame.006|Door005|Take 001|BaseLayer
+  - first:
+      74: -4766577494981891871
+    second: DoorFrame.006|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -7732620260521972996
+    second: DoorFrame.006|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: 6710715210612457642
+    second: DoorFrame.006|Glass_015|Take 001|BaseLayer
+  - first:
+      74: -7687542197233251471
+    second: DoorFrame.006|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -8098336564963222483
+    second: DoorFrame.006|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: 6405923436540942874
+    second: DoorFrame.006|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 4284732804319070178
+    second: DoorFrame.006|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: 89597388034623729
+    second: DoorFrame.006|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 5004793529430292841
+    second: DoorFrame.006|WoodChang|Take 001|BaseLayer
+  - first:
+      74: 6467741300574252534
+    second: DoorFrame.006|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  - first:
+      74: 2044230311717029817
+    second: DoorFrame.007|Door005|Take 001|BaseLayer
+  - first:
+      74: -749184153292842565
+    second: DoorFrame.007|DoorFrame|Take 001|BaseLayer
+  - first:
+      74: -7724208724705044347
+    second: DoorFrame.007|Gapandea008|Take 001|BaseLayer
+  - first:
+      74: -3941197621359732441
+    second: DoorFrame.007|Glass_015|Take 001|BaseLayer
+  - first:
+      74: 2417611173190919000
+    second: DoorFrame.007|GoryeoHanokA_|Take 001|BaseLayer
+  - first:
+      74: -511929829306690416
+    second: DoorFrame.007|PlasterWall_015|Take 001|BaseLayer
+  - first:
+      74: -221025936149999277
+    second: DoorFrame.007|RoughwoodHighsetu_015|Take 001|BaseLayer
+  - first:
+      74: 701407638401630621
+    second: DoorFrame.007|StoneCastle003|Take 001|BaseLayer
+  - first:
+      74: 8021197726661916505
+    second: DoorFrame.007|WindowFrame|Take 001|BaseLayer
+  - first:
+      74: 5015408680158556
+    second: DoorFrame.007|WoodChang|Take 001|BaseLayer
+  - first:
+      74: -5609679937495994822
+    second: DoorFrame.007|WoodPlankUi2leaxlw003|Take 001|BaseLayer
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
