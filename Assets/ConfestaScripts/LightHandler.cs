@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LightHandler : MonoBehaviour
 {
-    private Light[] lights;
+    public Light[] spotLights;
+    public Light faceLight;
     private float maxIntensity;
 
     [Tooltip("빛이 켜지기 위해 필요한 최소 거리, 큰 값")]
@@ -18,18 +19,19 @@ public class LightHandler : MonoBehaviour
 
     private void Awake()
     {
-        lights = GetComponentsInChildren<Light>();
-        maxIntensity = lights[0].intensity;
+        spotLights = GetComponentsInChildren<Light>();
+        maxIntensity = spotLights[0].intensity;
 
         sqrLSD = lightStartDistance * lightStartDistance;
         sqrLMD = lightMaxDistance * lightMaxDistance;
 
-        SetLightIntensity(0f);
+        SetSpotLightIntensity(0f);
+        faceLight.intensity = 0f;
     }
-    private void SetLightIntensity(float intensity)
+    private void SetSpotLightIntensity(float intensity)
     {
-        for(int i = 0; i < lights.Length; i++)
-            lights[i].intensity = intensity;
+        for(int i = 0; i < spotLights.Length; i++)
+            spotLights[i].intensity = intensity;
     }
     private void Update()
     {
@@ -37,11 +39,14 @@ public class LightHandler : MonoBehaviour
 
         if(sqrDist > sqrLSD)
         {
-            SetLightIntensity(0f);
+            SetSpotLightIntensity(0f);
+            faceLight.intensity = 0f;
             return;
         }
+
         float t = Mathf.InverseLerp(sqrLSD, sqrLMD, sqrDist);
         float currIntensity = Mathf.Lerp(0f, maxIntensity, t);
-        SetLightIntensity(currIntensity);
+        SetSpotLightIntensity(currIntensity);
+        faceLight.intensity = t;
     }
 }
