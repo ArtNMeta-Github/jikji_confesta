@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LightHandler : MonoBehaviour
 {
+    private PlayerDistanceChecker distanceChecker;
+
     public Light[] spotLights;
     public Light faceLight;
     private float maxIntensity;
@@ -19,6 +21,8 @@ public class LightHandler : MonoBehaviour
 
     private void Awake()
     {
+        distanceChecker = GetComponent<PlayerDistanceChecker>();
+
         spotLights = GetComponentsInChildren<Light>();
         maxIntensity = spotLights[0].intensity;
 
@@ -35,9 +39,9 @@ public class LightHandler : MonoBehaviour
     }
     private void Update()
     {
-        float sqrDist = Vector3.SqrMagnitude(transform.position - PlayerTracker.GetPlayerPos());
+        float sqrDist = distanceChecker.SqrDist;
 
-        if(sqrDist > sqrLSD)
+        if (sqrDist > sqrLSD)
         {
             SetSpotLightIntensity(0f);
             faceLight.intensity = 0f;
