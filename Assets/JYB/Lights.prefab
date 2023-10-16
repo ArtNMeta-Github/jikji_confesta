@@ -47,6 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2389b2909ae5814b999f4d2239dc7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spotLights:
+  - {fileID: 3885669048908155116}
+  - {fileID: 3885669048946832408}
+  - {fileID: 2274525058791615718}
+  faceLight: {fileID: 6486188251718456322}
   lightStartDistance: 4.5
   lightMaxDistance: 3
 --- !u!1 &3885669048908155117
