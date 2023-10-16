@@ -663,7 +663,42 @@ ModelImporter:
   - first:
       74: -5609679937495994822
     second: DoorFrame.007|WoodPlankUi2leaxlw003|Take 001|BaseLayer
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KoreaPaper
+    second: {fileID: 2100000, guid: b7ab9dfb14e375242b3fa2a2f723f9e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KoreaPaper.1
+    second: {fileID: 2100000, guid: 833d5107d5db4b642a8a22abe1ad6147, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock08
+    second: {fileID: 2100000, guid: 8a37b7dc13f1ab5499780bf4096f10e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint
+    second: {fileID: 2100000, guid: 97f09c5995f78764d937df420aeebbcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodMiscUczmfebgSetu
+    second: {fileID: 2100000, guid: 05313f06c75ca41478b634940e0b2139, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodOld
+    second: {fileID: 2100000, guid: d8d8cc2ea9533d548a8492e7f85d8b32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodPlankUi2leaxlw
+    second: {fileID: 2100000, guid: a32235bef3597ec43ad18eddced8960d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
