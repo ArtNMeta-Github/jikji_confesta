@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
+public class TriggerController : MonoBehaviour
 {
     private PlayerDistanceChecker distanceChecker;
 
@@ -13,6 +13,7 @@ public class AnimationController : MonoBehaviour
     private float SqrSD;
     
     private bool isPlaying = false;
+    public AudioClip audioClip;
 
     private void Awake()
     {
@@ -29,8 +30,12 @@ public class AnimationController : MonoBehaviour
 
         if (distanceChecker.SqrDist < SqrSD && !isPlaying)
         {
-            animator.SetTrigger(hashStart);
             isPlaying = true;
+
+            animator.SetTrigger(hashStart);
+
+            if(audioClip != null)
+                SingletonAudioSource.PlayClip(audioClip);
         }
     }
 }
