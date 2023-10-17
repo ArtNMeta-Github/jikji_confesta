@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDistanceChecker : MonoBehaviour
 {
-    public float SqrDist = float.MaxValue;
+    public float SqrDist = float.MaxValue; 
 
     // Update is called once per frame
     void Update()

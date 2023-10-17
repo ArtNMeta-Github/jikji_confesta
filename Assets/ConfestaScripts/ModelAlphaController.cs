@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class ModelAlphaController : MonoBehaviour
 {
-    Material[] materials;
+    private List<Material> materials = new List<Material>();
 
     public float alphaChangeTime;
     private Coroutine fadeCoroutine;
 
     private void Awake()
     {
-        for(int i = 0; i < materials.Length; i++)
+        var renderes = GetComponentsInChildren<Renderer>();
+        for(int i = 0; i < renderes.Length; i++)
+        {
+            materials.AddRange(renderes[i].materials);
+        }
+
+        for(int i = 0; i < materials.Count; i++)
         {
             var mat = materials[i];            
             mat.SetFloat("_Surface", 1.0f);            
             mat.SetFloat("_Blend", 0.0f);
         }
     }
-    public void SetMaterialsMaxAlphaValue()
+    public void SetAlphaMax()
     {
         if (fadeCoroutine != null)
             StopCoroutine(fadeCoroutine);
@@ -35,7 +41,7 @@ public class ModelAlphaController : MonoBehaviour
 
     private void SetMatrialsAlpha(float newAlpha)
     {
-        for (int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Count; i++)
         {
             var mat = materials[i];
             mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, newAlpha);
