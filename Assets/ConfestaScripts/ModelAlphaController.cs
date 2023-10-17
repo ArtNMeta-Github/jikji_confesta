@@ -8,6 +8,9 @@ public class ModelAlphaController : MonoBehaviour
 
     public float alphaChangeTime;
     private Coroutine fadeCoroutine;
+
+    private bool isFaded = false;
+
     private void Awake()
     {
         var renderes = GetComponentsInChildren<Renderer>();
@@ -16,29 +19,16 @@ public class ModelAlphaController : MonoBehaviour
             materials.AddRange(renderes[i].materials);
         }
     }
-    public void SetOpaque()
+    public void StartFadeIn()
     {
-        for (int i = 0; i < materials.Count; i++)
-            materials[i].SetFloat("_Surface", 0.0f);
+        if (fadeCoroutine != null)
+            StopCoroutine(fadeCoroutine);
+
+        SetMatrialsAlpha(0f);
+
+        if (isFaded)
+            fadeCoroutine = StartCoroutine(MaterialFadeCoroutine(false));
     }
-    private void SetMaterialsSurfaceTransparent()
-    {
-        for (int i = 0; i < materials.Count; i++)
-        {
-            var mat = materials[i];
-            mat.SetFloat("_Surface", 1.0f);
-            mat.SetFloat("_Blend", 0.0f);
-        }
-    }
-
-    //public void SetAlphaMax()
-    //{
-    //    if (fadeCoroutine != null)
-    //        StopCoroutine(fadeCoroutine);
-
-    //    SetMatrialsAlpha(1f);
-    //}
-
     public void StartFadeOut()
     {
         if(fadeCoroutine != null)
@@ -51,30 +41,33 @@ public class ModelAlphaController : MonoBehaviour
     {
         for (int i = 0; i < materials.Count; i++)
         {
-            var mat = materials[i];
-            mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, newAlpha);
+            materials[i].SetFloat("Dissolve", newAlpha);
         }
     }
 
-    IEnumerator MaterialFadeCoroutine()
+    IEnumerator MaterialFadeCoroutine(bool fadeOut = true)
     {
+        isFaded = fadeOut;
+
         float timer = 0f;
         float reverseT = 1 / alphaChangeTime;
 
-        SetMatrialsAlpha(1f);
-        SetMaterialsSurfaceTransparent();
+        float sour = fadeOut ? 0f : 1f;
+        float dest = fadeOut ? 1f : 0f;
+
+        SetMatrialsAlpha(sour);
 
         while (timer < alphaChangeTime)
         {
             timer += Time.deltaTime;
 
-            float newAlpha = Mathf.Lerp(1f, 0f, timer * reverseT);
+            float newAlpha = Mathf.Lerp(sour, dest, timer * reverseT);
             SetMatrialsAlpha(newAlpha);
 
             yield return null;
         }
 
-        SetMatrialsAlpha(0f);
+        SetMatrialsAlpha(dest);
 
         yield break;
     }
