@@ -1554,6 +1554,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -456936861353662231, guid: 1cb7e26aa0385e24f8ea243981b417b8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fa76bff0f5c49804fb46e2ab2df80ed1, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cb7e26aa0385e24f8ea243981b417b8, type: 3}
       propertyPath: m_Name
       value: 2_paper cutting_A
