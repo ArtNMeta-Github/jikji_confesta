@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7383537159873786928}
   - component: {fileID: 3692893536717896116}
+  - component: {fileID: 988726388570242043}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -54,6 +55,19 @@ MonoBehaviour:
   faceLight: {fileID: 6486188251718456322}
   lightStartDistance: 4.5
   lightMaxDistance: 3
+--- !u!114 &988726388570242043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757062801119758882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c72312c6ce35448b1b36947756968e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SqrDist: 3.4028235e+38
 --- !u!1 &3885669048908155117
 GameObject:
   m_ObjectHideFlags: 0

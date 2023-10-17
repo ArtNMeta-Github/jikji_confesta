@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LightHandler : MonoBehaviour
-{
+{   
     private PlayerDistanceChecker distanceChecker;
 
     public Light[] spotLights;

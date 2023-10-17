@@ -8,29 +8,37 @@ public class ModelAlphaController : MonoBehaviour
 
     public float alphaChangeTime;
     private Coroutine fadeCoroutine;
-
     private void Awake()
     {
         var renderes = GetComponentsInChildren<Renderer>();
-        for(int i = 0; i < renderes.Length; i++)
+        for (int i = 0; i < renderes.Length; i++)
         {
             materials.AddRange(renderes[i].materials);
         }
-
-        for(int i = 0; i < materials.Count; i++)
+    }
+    public void SetOpaque()
+    {
+        for (int i = 0; i < materials.Count; i++)
+            materials[i].SetFloat("_Surface", 0.0f);
+    }
+    private void SetMaterialsSurfaceTransparent()
+    {
+        for (int i = 0; i < materials.Count; i++)
         {
-            var mat = materials[i];            
-            mat.SetFloat("_Surface", 1.0f);            
+            var mat = materials[i];
+            mat.SetFloat("_Surface", 1.0f);
             mat.SetFloat("_Blend", 0.0f);
         }
     }
-    public void SetAlphaMax()
-    {
-        if (fadeCoroutine != null)
-            StopCoroutine(fadeCoroutine);
 
-        SetMatrialsAlpha(1f);
-    }
+    //public void SetAlphaMax()
+    //{
+    //    if (fadeCoroutine != null)
+    //        StopCoroutine(fadeCoroutine);
+
+    //    SetMatrialsAlpha(1f);
+    //}
+
     public void StartFadeOut()
     {
         if(fadeCoroutine != null)
@@ -53,7 +61,10 @@ public class ModelAlphaController : MonoBehaviour
         float timer = 0f;
         float reverseT = 1 / alphaChangeTime;
 
-        while(timer < alphaChangeTime)
+        SetMatrialsAlpha(1f);
+        SetMaterialsSurfaceTransparent();
+
+        while (timer < alphaChangeTime)
         {
             timer += Time.deltaTime;
 
