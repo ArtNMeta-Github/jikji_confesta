@@ -12,7 +12,7 @@ public class TriggerController : MonoBehaviour
     public float startDistance = 4.5f;
     private float SqrSD;
     
-    private bool isPlaying = false;
+    protected bool isPlaying = false;
     public AudioClip audioClip;    
 
     private void Awake()
@@ -21,7 +21,7 @@ public class TriggerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         SqrSD = startDistance * startDistance;
     }
-    private void Update()
+    protected virtual void Update()
     {
         if (distanceChecker.SqrDist > SqrSD)
         {

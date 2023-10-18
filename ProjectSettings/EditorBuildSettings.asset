@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/kyw.unity
-    guid: 1bc21394616001c40a82e2b6d7e89edf
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 05860895209d84444ba90a44f5a136f0, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 6ec9741b0a4f17947b1c11a776524ebc, type: 2}
