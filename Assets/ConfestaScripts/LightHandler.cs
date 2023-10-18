@@ -17,7 +17,9 @@ public class LightHandler : MonoBehaviour
     public float lightMaxDistance;
 
     private float sqrLSD;
-    private float sqrLMD;  
+    private float sqrLMD;
+
+    private CanvasGroup canvasGroup;
 
     private void Awake()
     {
@@ -31,6 +33,11 @@ public class LightHandler : MonoBehaviour
 
         SetSpotLightIntensity(0f);
         faceLight.intensity = 0f;
+
+        canvasGroup = GetComponentInChildren<CanvasGroup>();
+
+        if (canvasGroup != null)
+            canvasGroup.alpha = 0f;
     }
     private void SetSpotLightIntensity(float intensity)
     {
@@ -52,5 +59,8 @@ public class LightHandler : MonoBehaviour
         float currIntensity = Mathf.Lerp(0f, maxIntensity, t);
         SetSpotLightIntensity(currIntensity);
         faceLight.intensity = t;
+
+        if (canvasGroup != null)
+            canvasGroup.alpha = t;
     }
 }

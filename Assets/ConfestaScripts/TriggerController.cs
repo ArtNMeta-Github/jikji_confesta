@@ -13,25 +13,19 @@ public class TriggerController : MonoBehaviour
     private float SqrSD;
     
     private bool isPlaying = false;
-    public AudioClip audioClip;
-
-    private CanvasGroup canvasGroup;
+    public AudioClip audioClip;    
 
     private void Awake()
     {
         distanceChecker = GetComponent<PlayerDistanceChecker>();
         animator = GetComponentInChildren<Animator>();
         SqrSD = startDistance * startDistance;
-        canvasGroup = GetComponentInChildren<CanvasGroup>();
     }
     private void Update()
     {
         if (distanceChecker.SqrDist > SqrSD)
         {
             isPlaying = false;
-
-            if(canvasGroup  != null) 
-                canvasGroup.alpha = 0f;
             return;
         }
 
@@ -39,10 +33,7 @@ public class TriggerController : MonoBehaviour
         {
             isPlaying = true;
 
-            animator.SetTrigger(hashStart);
-
-            if (canvasGroup != null)
-                canvasGroup.alpha = 1f;
+            animator.SetTrigger(hashStart);   
 
             if (audioClip != null)
                 SingletonAudioSource.PlayClip(audioClip);
