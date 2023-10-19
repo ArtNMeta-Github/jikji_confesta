@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 public class PrintingTool : BNG.GrabbableEvents
-{
+{  
     public CustomRenderTexture rt_front;
     public CustomRenderTexture rt_back;
     Texture2D tex_front;
@@ -55,7 +55,6 @@ public class PrintingTool : BNG.GrabbableEvents
             var delta = Vector3.Distance(lastPrintPos, hit.point);
             slider.fillAmount += Time.deltaTime * delta * sliderValueMult;
         }
-
         printStarted = true;
         lastPrintPos = hit.point;
     }
