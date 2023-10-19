@@ -1,8 +1,14 @@
 fileFormatVersion: 2
-guid: 1527b9eb25d7d104ca49817d1330c4c5
+guid: edc9b4f6d6f7ca148bf701f0b8b020dc
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable:
+  - first:
+      74: 4450799253523702364
+    second: PlaneAction
+  - first:
+      74: 6624873865164572626
+    second: PlaneAction.001
   - first:
       74: -5187248419258813496
     second: Plane|PlaneAction
@@ -15,22 +21,7 @@ ModelImporter:
   - first:
       74: 4020719003613406083
     second: Plane.001|PlaneAction.001
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodCylinder
-    second: {fileID: 2100000, guid: c0a45ba410228204fa30acc45da42153, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: paper
-    second: {fileID: 2100000, guid: 06deaaaf179ca4643aa7fe6bd475046b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: paper.001
-    second: {fileID: 2100000, guid: 96864dc892c3afd4ebf1ceb2c1cc7807, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
