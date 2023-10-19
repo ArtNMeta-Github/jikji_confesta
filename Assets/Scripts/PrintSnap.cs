@@ -29,11 +29,22 @@ public partial class PrintSnap : BNG.GrabbableEvents
 
     public AudioSource snapAudio;
 
+    private Grabbable grabbable;
+
+    private void Start()
+    {
+        grabbable = GetComponent<Grabbable>();
+    }
+
+    public void SetActiveGrabbable(bool acitve) => grabbable.enabled = acitve;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Plate") && !isPrint)
         {
             snapAudio.Play();
+
+            SetActiveGrabbable(false);
 
             foreach (PrintSet p in prints)
             {
