@@ -23,6 +23,9 @@ public class PrintingTool : BNG.GrabbableEvents
 
     private bool printStarted = false;
     private Vector3 lastPrintPos = Vector3.zero;
+
+    
+
     public override void OnGrab(Grabber grabber)
     {
         GetComponent<Rigidbody>().isKinematic = false;
@@ -76,6 +79,7 @@ public class PrintingTool : BNG.GrabbableEvents
             if (slider.fillAmount > 0.9f && !snap.isPrint)
             {
                 snap.isPrint = true;
+                snap.IsClear = true;
                 snap.SetActiveGrabbable(true);
             }
 
