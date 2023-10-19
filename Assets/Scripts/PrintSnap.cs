@@ -20,6 +20,8 @@ public struct PrintSet
 public partial class PrintSnap : BNG.GrabbableEvents
 {
     public GameObject ClearScroll;
+    public GameObject[] canvases;
+
     public Transform playercam;
 
     public List<PrintSet> prints;
@@ -93,6 +95,16 @@ public partial class PrintSnap : BNG.GrabbableEvents
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Plate") && IsClear)
+        {
+            startClearSequnce = true;
+            Invoke(nameof(StartClearSequnce), 2f);
+        }
+    }
+
+
     private bool IsPlayerSeePaperBack()
     {
         // 카메라에서 종이 오브젝트로 향하는 벡터
@@ -105,24 +117,31 @@ public partial class PrintSnap : BNG.GrabbableEvents
         float angle = Vector3.Angle(toPaper, paperForward);
 
         // 각도가 임계값보다 작으면 앞면을 보고 있는 것으로 판단
-        return angle < 110f;
+        return angle > 90f;
     }
 
-    public void Update()
-    {
-        if (startClearSequnce)
-            return;
+    //public void Update()
+    //{
+    //    Debug.Log(IsPlayerSeePaperBack());
 
-        if(IsClear && IsPlayerSeePaperBack())
-        {
-            startClearSequnce = true;
-            Invoke(nameof(StartClearSequnce), 2f);
-        }
-    }
+    //    if (startClearSequnce)
+    //        return;
+
+    //    if(IsClear && IsPlayerSeePaperBack())
+    //    {
+    //        startClearSequnce = true;
+    //        Invoke(nameof(StartClearSequnce), 2f);
+    //    }
+    //}
 
     void StartClearSequnce()
     {
         ClearScroll.SetActive(true);
+
+        for(int i = 0; i < canvases.Length; i++)
+        {
+            canvases[i].SetActive(false);
+        }
     }
 }
 
