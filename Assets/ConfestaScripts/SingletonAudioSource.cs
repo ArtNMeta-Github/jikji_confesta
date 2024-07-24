@@ -10,6 +10,10 @@ public class SingletonAudioSource : MonoBehaviour
 
     public float clipChangeTime = 1f;
     public float clipChangeDelay = 0.5f;
+
+    public float loopInterval = 1.0f; 
+    private float timeSinceLastLoop = 0;
+
     private void Awake()
     {
         Instance = this;
@@ -26,6 +30,20 @@ public class SingletonAudioSource : MonoBehaviour
             StopCoroutine(clipChangeCoroutine);
 
         clipChangeCoroutine = StartCoroutine(ClipChangeCoroutine(clip));
+    }
+
+    private void Update()
+    {
+        // 현재 AudioSource가 재생 중이 아니면 루프 간격마다 다시 재생
+        if (!audioSource.isPlaying)
+        {
+            timeSinceLastLoop += Time.deltaTime;
+            if (timeSinceLastLoop >= loopInterval)
+            {
+                audioSource.Play();
+                timeSinceLastLoop = 0;
+            }
+        }
     }
 
     private IEnumerator ClipChangeCoroutine(AudioClip clip)

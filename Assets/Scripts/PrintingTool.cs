@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PrintingTool : BNG.GrabbableEvents
-{
+{  
     public CustomRenderTexture rt_front;
     public CustomRenderTexture rt_back;
     Texture2D tex_front;
@@ -15,6 +16,15 @@ public class PrintingTool : BNG.GrabbableEvents
     PrintSnap snap;
     RenderTexture tempTex;
     RaycastHit hit;
+
+    public UnityEngine.UI.Image slider;
+    public float sliderValueMult = 2f;
+    private int paperLayer;
+
+    private bool printStarted = false;
+    private Vector3 lastPrintPos = Vector3.zero;
+
+    
 
     public override void OnGrab(Grabber grabber)
     {
@@ -35,21 +45,45 @@ public class PrintingTool : BNG.GrabbableEvents
     {
         rt_front.Initialize();
         rt_back.Initialize();
+
+        slider.fillAmount = 0f;
+
+        paperLayer = 1 << LayerMask.NameToLayer("Paper");
+    }
+
+    void UpdateSlider()
+    {
+        if (printStarted)
+        {   
+            var delta = Vector3.Distance(lastPrintPos, hit.point);
+            slider.fillAmount += Time.deltaTime * delta * sliderValueMult;
+        }
+        printStarted = true;
+        lastPrintPos = hit.point;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(new Ray(transform.position, Vector3.down), out hit, distance, 1 << LayerMask.NameToLayer("Paper"))) {
+        if (Physics.Raycast(new Ray(transform.position, Vector3.down), out hit, distance, paperLayer)) {
             //
+            UpdateSlider();
+
             Vector3 eulerAngles = this.transform.eulerAngles;
             eulerAngles.x = 0.0f;
             eulerAngles.z = 0.0f;
             this.transform.eulerAngles = eulerAngles;
 
-            // 종이 업데이트
             snap = hit.transform.GetComponent<PrintSnap>();
-            snap.isPrint = true;
+
+            if (slider.fillAmount > 0.9f && !snap.isPrint)
+            {
+                snap.isPrint = true;
+                snap.IsClear = true;
+                snap.SetActiveGrabbable(true);
+            }
+
+            // 종이 업데이트
 
             tex_front = snap.prints[snap.index].front;
             tex_back = snap.prints[snap.index].back;

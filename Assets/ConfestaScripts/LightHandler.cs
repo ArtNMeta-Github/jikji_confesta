@@ -44,7 +44,7 @@ public class LightHandler : MonoBehaviour
         for(int i = 0; i < spotLights.Length; i++)
             spotLights[i].intensity = intensity;
     }
-    private void Update()
+    protected virtual void Update()
     {
         float sqrDist = distanceChecker.SqrDist;
 

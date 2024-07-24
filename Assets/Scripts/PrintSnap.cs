@@ -7,6 +7,7 @@ using UnityEngine;
 //
 using TMPro;
 
+
 [Serializable]
 public struct PrintSet
 {
@@ -18,6 +19,11 @@ public struct PrintSet
 // 종이가 인새판 위에 닿았을 때, 인쇄판의 위에 위치하도록 강제시키는 클래스.
 public partial class PrintSnap : BNG.GrabbableEvents
 {
+    public GameObject ClearScroll;
+    public GameObject[] canvases;
+
+    public Transform playercam;
+
     public List<PrintSet> prints;
 
     [HideInInspector]
@@ -26,14 +32,29 @@ public partial class PrintSnap : BNG.GrabbableEvents
     public int index = 0;
 
     //
+    public bool IsClear = false;
+
+    private bool startClearSequnce = false;
 
     public AudioSource snapAudio;
+
+    private Grabbable grabbable;
+
+    private void Start()
+    {
+        grabbable = GetComponent<Grabbable>();
+        playercam = Camera.main.transform;
+    }
+
+    public void SetActiveGrabbable(bool acitve) => grabbable.enabled = acitve;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Plate") && !isPrint)
         {
             snapAudio.Play();
+
+            SetActiveGrabbable(false);
 
             foreach (PrintSet p in prints)
             {
@@ -71,6 +92,55 @@ public partial class PrintSnap : BNG.GrabbableEvents
         if (other.CompareTag("Plate") && !isPrint)
         {
             transform.SetPositionAndRotation(prints[index].plate.transform.position + Vector3.up * Basic_plateUp, Quaternion.identity);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Plate") && IsClear)
+        {
+            startClearSequnce = true;
+            Invoke(nameof(StartClearSequnce), 2f);
+        }
+    }
+
+
+    private bool IsPlayerSeePaperBack()
+    {
+        // 카메라에서 종이 오브젝트로 향하는 벡터
+        Vector3 toPaper = transform.position - playercam.position;
+
+        // 종이 오브젝트의 전방 벡터
+        Vector3 paperForward = transform.forward;
+
+        // 벡터 사이의 각도를 계산
+        float angle = Vector3.Angle(toPaper, paperForward);
+
+        // 각도가 임계값보다 작으면 앞면을 보고 있는 것으로 판단
+        return angle > 90f;
+    }
+
+    //public void Update()
+    //{
+    //    Debug.Log(IsPlayerSeePaperBack());
+
+    //    if (startClearSequnce)
+    //        return;
+
+    //    if(IsClear && IsPlayerSeePaperBack())
+    //    {
+    //        startClearSequnce = true;
+    //        Invoke(nameof(StartClearSequnce), 2f);
+    //    }
+    //}
+
+    void StartClearSequnce()
+    {
+        ClearScroll.SetActive(true);
+
+        for(int i = 0; i < canvases.Length; i++)
+        {
+            canvases[i].SetActive(false);
         }
     }
 }
