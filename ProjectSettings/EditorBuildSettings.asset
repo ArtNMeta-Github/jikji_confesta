@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/RecordsOptimization.unity
+    guid: c3df20e310cfc1b478740eb4a4758f09
+  - enabled: 0
     path: Assets/Scenes/Records.unity
     guid: d584aeb9da46c374598e885449a01d5d
   - enabled: 0
