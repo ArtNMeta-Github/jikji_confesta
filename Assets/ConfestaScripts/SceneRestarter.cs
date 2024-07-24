@@ -31,7 +31,7 @@ public class SceneRestarter : MonoBehaviour
             RestartScene();        
     }
 
-    void RestartScene()
+    public void RestartScene()
     {    
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
