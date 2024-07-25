@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: ArtNMeta
-  productName: Jikji
+  productName: Jikji_confesta_v2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -134,13 +134,10 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.1
+  bundleVersion: 0.1.1
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 11400000, guid: 4a210204061d15944a6acf00b2298cac, type: 2}
-  - {fileID: 1393700262256734090, guid: b93b2332e233ea247ace3ae9c23146b0, type: 2}
-  - {fileID: 11400000, guid: 05860895209d84444ba90a44f5a136f0, type: 2}
-  - {fileID: 11400000, guid: 6ec9741b0a4f17947b1c11a776524ebc, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -159,7 +156,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.ArtNMeta.Jikjiv2
+    Android: com.ArtNMeta.Jikji_confesta_v2
     Standalone: com.DefaultCompany.Jikji
   buildNumber:
     Standalone: 0
@@ -712,7 +709,8 @@ PlayerSettings:
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
-  il2cppCompilerConfiguration: {}
+  il2cppCompilerConfiguration:
+    Android: 0
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1

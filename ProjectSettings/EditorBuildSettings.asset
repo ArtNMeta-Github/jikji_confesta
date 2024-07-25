@@ -5,8 +5,8 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/RecordsOptimization.unity
+  - enabled: 0
+    path: Assets/Scenes/RecordsOptimization_origin.unity
     guid: c3df20e310cfc1b478740eb4a4758f09
   - enabled: 0
     path: Assets/Scenes/Records.unity
@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Confesta.unity
     guid: 8dcb86d220508da48a76a540590d0752
+  - enabled: 1
+    path: Assets/Scenes/RecordsOptimization_origin_Test.unity
+    guid: d42b1b2d16ed8724c9e20674b688c0b7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 05860895209d84444ba90a44f5a136f0, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 6ec9741b0a4f17947b1c11a776524ebc, type: 2}
