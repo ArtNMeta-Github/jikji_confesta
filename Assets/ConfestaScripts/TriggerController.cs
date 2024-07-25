@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TriggerController : MonoBehaviour
 {
-    private PlayerDistanceChecker distanceChecker;
+    float sqrDist = float.MaxValue;
+
 
     private Animator animator;
     private int hashStart = Animator.StringToHash("Start");
@@ -17,19 +18,22 @@ public class TriggerController : MonoBehaviour
 
     private void Awake()
     {
-        distanceChecker = GetComponent<PlayerDistanceChecker>();
         animator = GetComponentInChildren<Animator>();
         SqrSD = startDistance * startDistance;
     }
+
+    
     protected virtual void Update()
     {
-        if (distanceChecker.SqrDist > SqrSD)
+        sqrDist = Vector3.SqrMagnitude(transform.position - PlayerTracker.GetPlayerPos());
+
+        if (sqrDist > SqrSD)
         {
             isPlaying = false;
             return;
         }
 
-        if (distanceChecker.SqrDist < SqrSD && !isPlaying)
+        if (sqrDist < SqrSD && !isPlaying)
         {
             isPlaying = true;
 
