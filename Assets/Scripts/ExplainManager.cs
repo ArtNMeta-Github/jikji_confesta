@@ -59,6 +59,7 @@ public class ExplainManager : MonoBehaviour
         {
             explainSources[i].explainHuman = workingMans[i];
             SetHumanTransform(workingMans[i], explainSources[i].positionTransform);
+            explainSources[i].explainHuman.SetAnimation(i, explainSources[i].animatorController);
         }
     }
 
@@ -66,20 +67,20 @@ public class ExplainManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for(int i=0;i<explainSources.Length;i++)
-        {
-            if (explainSources[i].trigger.IsPlayerStay)
-            {
-                MoveHuman(i);
+        //for(int i=0;i<explainSources.Length;i++)
+        //{
+        //    if (explainSources[i].trigger.IsPlayerStay)
+        //    {
+        //        MoveHuman(i);
+        //        explainSources[i].explainHuman.SetAnimation(i, explainSources[i].animatorController);
+        //        explainSources[i].explainHuman.PlayAnimation();
                 
-                explainSources[i].explainHuman.PlayAnimation();
-                
-            }
-            else
-            {
-                explainSources[i].explainHuman.StopAnimation();
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        explainSources[i].explainHuman.StopAnimation();
+        //    }
+        //}
         
     }
 }

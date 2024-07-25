@@ -13,25 +13,37 @@ public class ExplainingMan : MonoBehaviour
         public GameObject[] animToolObjects;
     }
 
-    int positionIndex;
+    int currentPositionIndex = -1;
     Animator manAnimator;
-    List<GameObject> enableObjectList = new List<GameObject>();
+    List<Transform> enableObjectList = new List<Transform>();
 
-    [SerializeField] AnimationObject[] animObjects;
+    [SerializeField] GameObject[] parentsAnimObjects;
 
     
     void ResetObjectList() 
     {
-        foreach (var obj in enableObjectList) obj.SetActive(false);
+        foreach (var obj in enableObjectList) obj.SetParent(parentsAnimObjects[currentPositionIndex].transform);
 
         enableObjectList.Clear();
     }
+
     public void AddEnableObjectList(int positionIndex) 
     {
-        enableObjectList = animObjects[positionIndex].animToolObjects.ToList();
-        foreach (var temp in enableObjectList)
-            temp.SetActive(true);
+        this.currentPositionIndex = positionIndex;
+        
+        for(int i=0;i< parentsAnimObjects[positionIndex].transform.childCount;i++)
+        {
+            enableObjectList.Add(parentsAnimObjects[positionIndex].transform.GetChild(i));
+            parentsAnimObjects[positionIndex].transform.GetChild(i).gameObject.SetActive(true);
+        }
+
+        //foreach(Transform obj in parentsAnimObjects[positionIndex].transform.chil)
+        //{
+        //    enableObjectList.Add(obj);
+        //    obj.SetParent(transform);
+        //}
     }
+
     public void PlayAnimation() => manAnimator.StartPlayback();
     public void StopAnimation() => manAnimator.StopPlayback();
 
@@ -44,8 +56,16 @@ public class ExplainingMan : MonoBehaviour
         AddEnableObjectList(positionIndex);
     }
 
+    [ContextMenu("log")]
+    public void PrintIndex()
+    {
+        print(currentPositionIndex);
+    }
 
-
+    private void Awake()
+    {
+        manAnimator = GetComponent<Animator>();
+    }
 
     // Start is called before the first frame update
     void Start()
