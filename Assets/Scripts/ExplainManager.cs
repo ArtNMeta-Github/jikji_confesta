@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor.Animations;
+#endif
 
 public class ExplainManager : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class ExplainManager : MonoBehaviour
         public bool isAnimationPlay;
 
         public Transform positionTransform;
-        public AnimatorController animatorController;
+        public RuntimeAnimatorController animatorController;
         public ExplainTrigger trigger;
 
         [HideInInspector] public ExplainingMan explainHuman;
@@ -36,16 +38,16 @@ public class ExplainManager : MonoBehaviour
 
         if(explainSources[centerPositionIndex - 1].explainHuman == null)
         {
-            explainSources[centerPositionIndex - 1].explainHuman = explainSources[centerPositionIndex + 3].explainHuman;
-            explainSources[centerPositionIndex + 3].explainHuman = null;
-            explainSources[centerPositionIndex + 1].explainHuman.SetAnimation(centerPositionIndex - 1, explainSources[centerPositionIndex - 1].animatorController);
+            explainSources[centerPositionIndex - 1].explainHuman = explainSources[centerPositionIndex + 2].explainHuman;
+            explainSources[centerPositionIndex + 2].explainHuman = null;
+            explainSources[centerPositionIndex - 1].explainHuman.SetAnimation(centerPositionIndex - 1, explainSources[centerPositionIndex - 1].animatorController);
             SetHumanTransform(explainSources[centerPositionIndex - 1].explainHuman, explainSources[centerPositionIndex - 1].positionTransform);
         }
 
         if (explainSources[centerPositionIndex + 1].explainHuman == null)
         {
-            explainSources[centerPositionIndex + 1].explainHuman = explainSources[centerPositionIndex - 3].explainHuman;
-            explainSources[centerPositionIndex - 3].explainHuman = null;
+            explainSources[centerPositionIndex + 1].explainHuman = explainSources[centerPositionIndex - 2].explainHuman;
+            explainSources[centerPositionIndex - 2].explainHuman = null;
             explainSources[centerPositionIndex + 1].explainHuman.SetAnimation(centerPositionIndex + 1, explainSources[centerPositionIndex + 1].animatorController);
             SetHumanTransform(explainSources[centerPositionIndex + 1].explainHuman, explainSources[centerPositionIndex + 1].positionTransform);
         }
@@ -67,19 +69,24 @@ public class ExplainManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //for(int i=0;i<explainSources.Length;i++)
+
+        for (int i = 0; i < explainSources.Length; i++)
+        {
+            if (explainSources[i].trigger.IsPlayerStay)
+            {
+                MoveHuman(i);
+                explainSources[i].explainHuman.ResumePlaying();
+            }
+            else
+            {
+                if (explainSources[i].explainHuman != null)
+                    explainSources[i].explainHuman.StopPlaying();
+            }
+        }
+
+        //if (ExplainTrigger.IsAllTrigger)
         //{
-        //    if (explainSources[i].trigger.IsPlayerStay)
-        //    {
-        //        MoveHuman(i);
-        //        explainSources[i].explainHuman.SetAnimation(i, explainSources[i].animatorController);
-        //        explainSources[i].explainHuman.PlayAnimation();
-                
-        //    }
-        //    else
-        //    {
-        //        explainSources[i].explainHuman.StopAnimation();
-        //    }
+            
         //}
         
     }

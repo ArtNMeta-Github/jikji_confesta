@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Animations;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor.Animations;
+#endif
 
 public class ExplainingMan : MonoBehaviour
 {
@@ -18,16 +20,21 @@ public class ExplainingMan : MonoBehaviour
     List<Transform> enableObjectList = new List<Transform>();
 
     [SerializeField] GameObject[] parentsAnimObjects;
+    [SerializeField] GameObject paper;
+    [SerializeField] GameObject paper_print;
 
-    
-    void ResetObjectList() 
+
+    void ResetObjectList()
     {
-        foreach (var obj in enableObjectList) obj.SetParent(parentsAnimObjects[currentPositionIndex].transform);
-
+        foreach (var obj in enableObjectList)
+        { 
+            obj.SetParent(parentsAnimObjects[currentPositionIndex].transform);
+            obj.gameObject.SetActive(false);
+        }
         enableObjectList.Clear();
     }
 
-    public void AddEnableObjectList(int positionIndex) 
+    public void AddEnableObjectList(int positionIndex)
     {
         this.currentPositionIndex = positionIndex;
         int tempChildCount = parentsAnimObjects[positionIndex].transform.childCount;
@@ -43,25 +50,52 @@ public class ExplainingMan : MonoBehaviour
     public void PlayAnimation() => manAnimator.StartPlayback();
     public void StopAnimation() => manAnimator.StopPlayback();
 
-    public void SetAnimation(int positionIndex, AnimatorController explainAnimController)
+    public void SetAnimation(int positionIndex, RuntimeAnimatorController explainAnimController)
     {
         ResetObjectList();
         AddEnableObjectList(positionIndex);
 
         if (manAnimator.runtimeAnimatorController == null || manAnimator.runtimeAnimatorController != explainAnimController)
+        {
             manAnimator.runtimeAnimatorController = explainAnimController;
+            PlaySetting();
+            StopPlaying();
+        }
 
     }
 
-    [ContextMenu("log")]
-    public void PrintIndex()
+    [ContextMenu("Play")]
+    public void PlaySetting()
     {
-        print(enableObjectList.Count);
+        //manAnimator.SetTrigger("Start");
+        manAnimator.Play("Scene");
+
+    }
+    [ContextMenu("Stop")]
+    public void StopPlaying()
+    {
+        manAnimator.speed = 0;
+    }
+    [ContextMenu("Resume")]
+    public void ResumePlaying()
+    {
+        manAnimator.speed = 1;
     }
 
+    
     public void StartFadeIn() { }
     public void StartFadeOut() { }
 
+    public void FocusPaper()
+    {
+        paper.SetActive(true);
+        paper_print.SetActive(false);
+    }
+    public void FocusPrint()
+    {
+        paper.SetActive(false);
+        paper_print.SetActive(true);
+    }
 
     private void Awake()
     {
@@ -73,6 +107,7 @@ public class ExplainingMan : MonoBehaviour
     {
         manAnimator = GetComponent<Animator>();
     }
+
 
 
 }

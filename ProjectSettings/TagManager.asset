@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Plate
   - Tutorial
+  - Grabber
   layers:
   - Default
   - TransparentFX
