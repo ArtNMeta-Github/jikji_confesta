@@ -58,7 +58,10 @@ public class ExplainingMan : MonoBehaviour
     {
         print(enableObjectList.Count);
     }
-    
+
+    public void StartFadeIn() { }
+    public void StartFadeOut() { }
+
 
     private void Awake()
     {
