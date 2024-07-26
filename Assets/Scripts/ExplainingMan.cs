@@ -30,18 +30,14 @@ public class ExplainingMan : MonoBehaviour
     public void AddEnableObjectList(int positionIndex) 
     {
         this.currentPositionIndex = positionIndex;
-        
-        for(int i=0;i< parentsAnimObjects[positionIndex].transform.childCount;i++)
-        {
-            enableObjectList.Add(parentsAnimObjects[positionIndex].transform.GetChild(i));
-            parentsAnimObjects[positionIndex].transform.GetChild(i).gameObject.SetActive(true);
-        }
+        int tempChildCount = parentsAnimObjects[positionIndex].transform.childCount;
 
-        //foreach(Transform obj in parentsAnimObjects[positionIndex].transform.chil)
-        //{
-        //    enableObjectList.Add(obj);
-        //    obj.SetParent(transform);
-        //}
+        for (int i = 0; i < tempChildCount; i++)
+        {
+            enableObjectList.Add(parentsAnimObjects[positionIndex].transform.GetChild(0));
+            parentsAnimObjects[positionIndex].transform.GetChild(0).gameObject.SetActive(true);
+            parentsAnimObjects[positionIndex].transform.GetChild(0).SetParent(transform);
+        }
     }
 
     public void PlayAnimation() => manAnimator.StartPlayback();
@@ -49,18 +45,20 @@ public class ExplainingMan : MonoBehaviour
 
     public void SetAnimation(int positionIndex, AnimatorController explainAnimController)
     {
+        ResetObjectList();
+        AddEnableObjectList(positionIndex);
+
         if (manAnimator.runtimeAnimatorController == null || manAnimator.runtimeAnimatorController != explainAnimController)
             manAnimator.runtimeAnimatorController = explainAnimController;
 
-        ResetObjectList();
-        AddEnableObjectList(positionIndex);
     }
 
     [ContextMenu("log")]
     public void PrintIndex()
     {
-        print(currentPositionIndex);
+        print(enableObjectList.Count);
     }
+    
 
     private void Awake()
     {
@@ -72,4 +70,6 @@ public class ExplainingMan : MonoBehaviour
     {
         manAnimator = GetComponent<Animator>();
     }
+
+
 }
