@@ -19,6 +19,8 @@ public struct PrintSet
 // 종이가 인새판 위에 닿았을 때, 인쇄판의 위에 위치하도록 강제시키는 클래스.
 public partial class PrintSnap : BNG.GrabbableEvents
 {
+    [SerializeField] Transform paintPosition;
+
     public GameObject ClearScroll;
     public GameObject[] canvases;
 
@@ -40,21 +42,53 @@ public partial class PrintSnap : BNG.GrabbableEvents
 
     private Grabbable grabbable;
 
+    Grabber tempGrabber;
+    float timer = 0;
+    bool isTime = false;
+
+    public void SetActiveGrabbable(bool acitve)
+    {
+        grabbable.enabled = acitve;
+        
+    }
+
     private void Start()
     {
         grabbable = GetComponent<Grabbable>();
         playercam = Camera.main.transform;
+       
     }
 
-    public void SetActiveGrabbable(bool acitve) => grabbable.enabled = acitve;
+    private void Update()
+    {
+        if (isTime)
+        {
+            timer += Time.deltaTime;
+            if (timer > 1)
+            {
+                tempGrabber.ForceRelease = false;
+                isTime = false;
+            }
+        }
+
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Plate") && !isPrint)
         {
             snapAudio.Play();
-
+            tempGrabber = grabbable.GetPrimaryGrabber();
+            if(tempGrabber != null)
+            {
+                tempGrabber.ForceRelease = true;
+                transform.SetParent(null);
+                isTime = true;
+            }
             SetActiveGrabbable(false);
+            
+            
 
             foreach (PrintSet p in prints)
             {
@@ -92,11 +126,22 @@ public partial class PrintSnap : BNG.GrabbableEvents
         if (other.CompareTag("Plate") && !isPrint)
         {
             transform.SetPositionAndRotation(prints[index].plate.transform.position + Vector3.up * Basic_plateUp, Quaternion.identity);
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if(other.CompareTag("Plate") && !IsClear)
+        {
+            transform.SetPositionAndRotation(paintPosition.position, paintPosition.rotation);
+
+           
+
+            return;
+
+        }
+
         if (other.CompareTag("Plate") && IsClear)
         {
             startClearSequnce = true;
